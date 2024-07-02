@@ -1,0 +1,236 @@
+{
+  "sections": [
+    {
+      "id": "objetivo-general",
+      "title": "Objetivo General",
+      "paragraphs": [
+        "Desarrollar un enfoque de cifrado de objetos JSON utilizando sincronización caótica a partir del análisis de un conjunto definido de atractores"
+      ],
+      "images": []
+    },
+    {
+      "id": "antecedentes",
+      "title": "Antecedentes",
+      "paragraphs": [
+        "En el ámbito del desarrollo software, los objetos JSON se utilizan comúnmente para enviar y recuperar información. JSON (JavaScript Object Notation) (Bray, 2017; «ECMA-404», s. f.) se utiliza como un enfoque de serialización de objetos basado en la sintaxis del lenguaje de programación JavaScript. Los objetos JSON pueden verse como diccionarios que constan de información estructurada en pares clave-valor. Debido su simplicidad, JSON es fácilmente legible por humanos o por máquinas, JSON es uno de los formatos más populares para intercambiar datos en la Web (Bourhis et al., 2017). Hoy en día, la mayoría de las aplicaciones web se basan en un estilo de arquitectura software basado en servicios web, donde los componentes (o servicios) software se comunican entre sí mediante el uso de APIs (interfaces de programación de aplicaciones). En este sentido, los objetos JSON son el formato de intercambio predominante para enviar solicitudes de APIs y respuestas sobre el protocolo HTTP. Debido a que los objetos JSON se transportan comúnmente a través del protocolo HTTP, un enfoque para protegerlos es a través del protocolo HTTPS. HTTPS ofrece un cifrado de capa de transporte punto a punto mediante el uso de la seguridad de la capa de transporte (TLS)(Rescorla, 2018). Sin embargo, vale la pena señalar que TLS se vuelve insuficiente en escenarios donde los objetos JSON se redirigen a través de proxies no confiables (intermediarios). En este contexto, los objetos JSON se pueden cifrar para mejorar la seguridad de su información. Un enfoque común para proteger los objetos JSON es mediante el uso de JSON Web Encryption (Jones & Hildebrand, 2015). JSON Web Encryption (JWE) es un estándar que proporciona una sintaxis para el intercambio de datos cifrados. Se dice que las implementaciones de JWE proporcionan mecanismos de cifrado autenticados destinados a garantizar la confidencialidad, autenticidad e integridad de los objetos JSON. Sin embargo, se han identificado algunas vulnerabilidades en las implementaciones del JWE. Una de estas vulnerabilidades puede permitir a los atacantes recuperar claves privadas. También se ha observado que algunas implementaciones de JWE están sujetas a un clásico ataque de curva no válida (Detering et al., 2017; Rashid, 2017). Otra vulnerabilidad identificada es la relacionada con MMA (Million Message Attack)(Bleichenbacher, 1998), que puede presentarse durante el intercambio de claves en el algoritmo RSA (Rivest et al., 1978) durante una sesión segura en la capa de transporte (TLS). Cabe señalar que en el enfoque propuesto en esta investigación no se han reportado vulnerabilidades al utilizar cómputo cuántico, por lo que es un enfoque viable y resistente a éste (Kasapbaşi, 2019). Dado lo anterior, en esta investigación se explora el uso de la sincronización caótica para el cifrado de objetos JSON como una alternativa a propuestas existentes. En la presente investigación se propone entonces emplear la sincronización caótica para cifrar objetos JSON a través del análisis de un conjunto de atractores caóticos."
+      ],
+      "images": []
+    },
+    {
+      "id": "justificacion",
+      "title": "Justificación",
+      "paragraphs": [
+        "La finalidad de la presente investigación consiste en proponer una alternativa al JWE (JSON Web Encryption) para asegurar objetos JSON. Puntualmente en esta investigación se pretende desarrollar un enfoque para asegurar objetos JSON mediante sincronización caótica tomando como referente el análisis de un conjunto de atractores caóticos. Dadas las limitaciones reportadas de utilizar JWE, en esta investigación se propone un enfoque alternativo de cifrado de objetos JSON a través del uso de la sincronización caótica, en este enfoque no se han reportado vulnerabilidades al utilizar cómputo cuántico, por lo que es un enfoque viable y resistente al cómputo cuántico (Kasapbaşi, 2019). Para llevar a cabo esta propuesta se realizará un análisis de un conjunto atractores existentes con la finalidad de seleccionar el que ofrece un mejor beneficio para efectuar el cifrado."
+      ],
+      "images": []
+    },
+    {
+      "id": "resumen",
+      "title": "Resumen",
+      "paragraphs": [
+        "En la actualidad en mayor o menor medida los productos software desarrollados se encuentran expuestos al Internet. Internamente estos productos están conformados por componentes software los cuales, muchos de ellos, se intercomunican a través del Internet, enviando y recibiendo información. Un formato común para el intercambio de información entre estos componentes es el formato JSON, Sin bien existen algunos enfoque para asegurar la información en este formato, se ha observado algunas amenazas que implican el acceso no autorizado a la información contenida en los objetos JSON. Con el fin de ofrecer una alternativa al actual enfoque de cifrado de objetos JSON en la presente investigación se propone el desarrollo de un enfoque de cifrado de objetos JSON utilizando sincronización caótica a partir de la selección de un conjunto de atractores. El enfoque a desarrollar se pretende pueda ser utilizado en el ámbito académico por docentes e investigadores, así como por profesionales en la industria de software."
+      ],
+      "images": []
+    },
+    {
+      "id": "sincronizacion-caotica",
+      "title": "Sincronización Caótica",
+      "paragraphs": [
+        "La sincronización caótica es un fenómeno en el que dos o más sistemas caóticos pueden ajustar su dinámica para volverse idénticos o similares. Esto puede suceder cuando los sistemas están acoplados por alguna forma de interacción o comunicación, como una fuerza impulsora común, una señal de retroalimentación o un entorno compartido. La sincronización caótica tiene aplicaciones en varios campos, como la comunicación segura, las redes neuronales y las redes complejas."
+      ],
+      "images": []
+    },
+    {
+      "id": "atractor-rossler",
+      "title": "Atractor de Rossler",
+      "paragraphs": [
+        "El atractor de Rössler describe el comportamiento de un sistema dinámico de tres ecuaciones diferenciales ordinarias no lineales. Fue estudiado originalmente por Otto Rössler en la década de 1970 y exhibe dinámicas caóticas y propiedades fractales. El atractor de Rössler se puede utilizar para modelar el equilibrio en reacciones químicas y otros fenómenos. Las ecuaciones que definen el atractor de Rössler son: donde A, B y C son los parametros de equilibrio. El atractor de Rössler tiene forma de espiral que se tuerce y gira en tres dimensiones. Tiene algunas similitudes con el atractor de Lorenz, pero es más simple y tiene solo una variedad."
+      ],
+      "images": [
+        {
+          "src": "assets/img1.png",
+          "alt": "Atractor de Rossler"
+        }
+      ],
+      "equations": [
+        "x = -(y + z)",
+        "y = x + ay",
+        "z = b + z(x - c)"
+      ]
+    },
+    {
+      "id": "atractor-lorenz",
+      "title": "Atractor de Lorenz",
+      "paragraphs": [
+        "El atractor de Lorenz es un modelo matemático de un sistema dinámico (caótico) que exhibe una dependencia sensible de las condiciones iniciales. Fue introducido por primera vez por Edward Lorenz en 1963 como una representación simplificada de la convección atmosférica. El atractor de Lorenz consta de tres ecuaciones diferenciales acopladas que describen la evolución de tres variables: x, y y z. Las ecuaciones tienen tres parámetros: sigma, rho y beta, que controlan la forma y el comportamiento del atractor. El atractor de Lorenz es uno de los ejemplos más famosos de un atractor extraño, un conjunto de puntos en el espacio de fase que tiene una estructura fractal y atrae trayectorias cercanas."
+      ],
+      "images": [
+        {
+          "src": "assets/img2.png",
+          "alt": "Atractor de Lorenz"
+        }
+      ],
+      "equations": [
+        "x=σ(−x+y)",
+        "y=−xz+ρx−y",
+        "z=xy−βz"
+      ]
+    },
+    {
+      "id": "atractor-chen",
+      "title": "Atractor de Chen",
+      "paragraphs": [
+        "El atractor de Chen es un tipo de atractor de desplazamiento múltiple propuesto por Guanrong Chen, un matemático chino e investigador del caos. El atractor de Chen es un sistema dinámico tridimensional que exhibe un comportamiento caótico y tiene una estructura geométrica compleja. El atractor de Chen se puede describir mediante un sistema de tres ecuaciones diferenciales ordinarias no lineales con tres parámetros. El atractor de Chen tiene algunas similitudes con el atractor de Lorenz, pero también algunas diferencias, como la forma y el número de puntos de equilibrio."
+      ],
+      "images": [
+        {
+          "src": "assets/img3.png",
+          "alt": "Atractor de Chen"
+        }
+      ],
+      "equations": [
+        "x=a(y−x)",
+        "y=(c−a)x−xz+cy",
+        "z=xy−bz"
+      ]
+    },
+    {
+      "id": "atractor-sprott",
+      "title": "Atractor de Sprott",
+      "paragraphs": [
+        "El atractor de Chen es un tipo de atractor de desplazamiento múltiple propuesto por Guanrong Chen, un matemático chino e investigador del caos. El atractor de Chen es un sistema dinámico tridimensional que exhibe un comportamiento caótico y tiene una estructura geométrica compleja. El atractor de Chen se puede describir mediante un sistema de tres ecuaciones diferenciales ordinarias no lineales con tres parámetros. El atractor de Chen tiene algunas similitudes con el atractor de Lorenz, pero también algunas diferencias, como la forma y el número de puntos de equilibrio."
+      ],
+      "images": [
+        {
+          "src": "assets/img4.png",
+          "alt": "Atractor de Sprott"
+        }
+      ],
+      "equations": [
+        "x=a(y−x)",
+        "y=bxz",
+        "z=c−xy"
+      ]
+    },
+    {
+      "id": "bibliografia",
+      "title": "Bibliografía",
+      "paragraphs": [
+        "-Bleichenbacher, D. (1998). Chosen ciphertext attacks against protocols based on the RSA encryption standard PKCS #1 En H. Krawczyk (Ed.), Advances in Cryptology—CRYPTO ’98 (pp. 1-12). Springer. https://doi.org/10.1007/BFb005571",
+        "-Bourhis, P., Reutter, J. L., Suárez, F., & Vrgoč, D. (2017). JSON: Data model, Query languages and Schema specification Proceedings of the 36th ACM SIGMOD-SIGACT-SIGAI Symposium on Principles of Database Systems, 123-135. https://doi.org/10.1145/3034786.3056120",
+        "-Bray, T. (2017). The JavaScript Object Notation (JSON) Data Interchange Format (Número 8259). ). RFC Editor. https://rfc-editor.org/rfc/rfc8259.txt",
+        "-Detering, D., Somorovsky, J., Mainka, C., Mladenov, V., & Schwenk, J. (2017). On The (In-)Security Of JavaScript Object Signing And Encryption.  Proceedings of the 1st Reversing and Offensive oriented Trends Symposium, 1-11. https://doi.org/10.1145/3150376.3150379",
+        "-ECMA-404. (s. f.). Ecma International. Recuperado 4 de noviembre de 2021, de https://www.ecma-international.org/publications-and-standards/standards/ecma-404/",
+        "-Jones, M., & Hildebrand, J. (2015). JSON Web Encryption (JWE) (Número 7516). RFC Editor. https://rfc-editor.org/rfc/rfc7516.txt",
+        "-Rashid, F. Y. (2017, marzo 27). Critical flaw alert! Stop using JSON encryption. InfoWorld. https://www.infoworld.com/article/3184582/critical-flaw-alert-stop-using-json-encryption.html",
+        "-Rescorla, E. (2018). The Transport Layer Security (TLS) Protocol Version 1.3 (Número 8446). RFC Editor. https://rfc-editor.org/rfc/rfc8446.txt",
+        "-Rivest, R. L., Shamir, A., & Adleman, L. (1978). A method for obtaining digital signatures and public-key cryptosystems. Communications of the ACM, 21(2), 120-126. https://doi.org/10.1145/359340.359342",
+        "-Kasapbaşi, M. C. (2019). A New Chaotic Image Steganography Technique Based on Huffman Compression of Turkish Texts and Fractal Encryption With Post-Quantum Security. IEEE Access, vol. 7, pp. 148495-148510."
+      ],
+      "images": []
+    },
+    {
+      "id": "resultados",
+      "title": "Resultados",
+      "paragraphs": [
+        "ejemplo de mismo objeto json cifrado dos veces. An initialization vector (IV) is an arbitrary number that can be used with a secret key for data encryption to foil cyber attacks. This number, also called a nonce (number used once), is employed only one time in any session to prevent unauthorized decryption of the message by a suspicious or malicious actor.",
+        "The use of an IV prevents the repetition of a sequence of text in data encryption. Specifically, during encryption, an IV prevents a sequence of plaintext that's identical to a previous plaintext sequence from producing the same ciphertext. If an attacker can view the same encrypted data multiple times, they get clues to decrypt and interpret the original values."
+      ],
+      "images": [
+        {
+          "src": "assets/img1.jpg",
+          "alt": "Caos Json Generado con IA"
+        },
+        {
+          "src": "assets/img5.png",
+          "alt": "Resultado 1"
+        },
+        {
+          "src": "assets/img6.png",
+          "alt": "Resultado 2"
+        },
+        {
+          "src": "assets/img7.png",
+          "alt": "Resultado 3"
+        },
+        {
+          "src": "assets/img8.png",
+          "alt": "Resultado 4"
+        },
+        {
+          "src": "assets/img9.png",
+          "alt": "Resultado 5"
+        },
+        {
+          "src": "assets/img10.png",
+          "alt": "Ejemplo JSON cifrado 1"
+        }
+      ]
+    },
+    {
+      "id": "evaluacion-propuesta",
+      "title": "Evaluación propuesta",
+      "paragraphs": [
+        "Para la evaluación del enfoque desarrollado, se utilizaron algunas técnicas estadísticas. Por ejemplo, con un gráfico de correlación se puede examinar la correlación entre el objeto JSON original vs el objeto JSON regenerado (después del proceso de descifrado), como se observa en la siguiente figura. Como se observa en la figura, el proceso de regeneración se realiza fielmente con respecto al origen."
+      ],
+      "images": [
+        {
+          "src": "assets/img11.png",
+          "alt": "Gráfico de correlación entre el objeto JSON original vs el objeto JSON regenerado"
+        }
+      ]
+    },
+    {
+      "id": "otro-parrafo",
+      "title": "",
+      "paragraphs": [
+        "En el siguiente gráfico de correlación se examina el objeto JSON sin cifrar vs el objeto JSON cifrado con el fin de encontrar algún posible patrón que sugiera una posible relación (debilidad del criptosistema)."
+      ],
+      "images": [
+        {
+          "src": "assets/img14.png",
+          "alt": "Gráfico de correlación entre el objeto JSON sin cifrar vs el objeto JSON cifrado"
+        }
+      ]
+    },
+    {
+      "id": "otro-parrafo-2",
+      "title": "",
+      "paragraphs": [
+        "En el siguiente gráfico de correlación se examina el objeto JSON sin cifrar vs el objeto JSON cifrado con el fin de encontrar algún posible patrón que sugiera una posible relación (debilidad del criptosistema)."
+      ],
+      "images": [
+        {
+          "src": "assets/img12.png",
+          "alt": "Gráfico de correlación entre el objeto JSON sin cifrar vs el objeto JSON cifrado"
+        }
+      ]
+    },
+    {
+      "id": "otro-parrafo-3",
+      "title": "",
+      "paragraphs": [
+        "Mientras que en el siguiente gráfico se presenta un histograma con la distribución de los valores que contiene el objeto JSON una vez cifrado. Como se observa, no hay un patrón en el que se repita más veces alguno de los valores, a diferencia del histograma anterior."
+      ],
+      "images": [
+        {
+          "src": "assets/img15.png",
+          "alt": "Histograma de la distribución de valores en el objeto JSON cifrado"
+        }
+      ]
+    },
+    {
+      "id": "otro-parrafo-4",
+      "title": "",
+      "paragraphs": [
+        "Finalmente, en el siguiente gráfico de correlación se examina la posible relación entre dos mismos objetos JSON cifrados (prueba de aleatoriedad). Como se observa en el gráfico, no hay una correlación lineal entre ambos objetos cifrados."
+      ],
+      "images": [
+        {
+          "src": "assets/img13.png",
+          "alt": "Gráfico de correlación entre dos mismos objetos JSON cifrados"
+        }
+      ]
+    }
+  ]
+}
